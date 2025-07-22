@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Resume', href: '/SaiRuthvik.pdf', target: '_blank' },
+  { name: 'Resume', href: '/Sai_Ruthvik MLE.pdf', target: '_blank' },
   { name: 'Contact', href: '#contact' },
 ]
 
