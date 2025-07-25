@@ -1,0 +1,175 @@
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.45in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+\titlespacing*{\section}{0pt}{8pt}{5pt}
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=2pt,parsep=0pt,topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Large \scshape Sai Ruthvik Bommakanti} \\ \vspace{1pt}
+    \textbf{Machine Learning Engineer} \\ \vspace{1pt}
+    \small +91 9290614597 $|$ \href{mailto:ruthvikworking@gmail.com}{ruthvikworking@gmail.com} $|$ 
+    \href{https://linkedin.com/in/sai-ruthvik-6b880a213}{linkedin.com/in/sai-ruthvik-6b880a213} $|$
+    \href{https://github.com/hawkh}{github.com/hawkh} $|$ Hyderabad, India
+\end{center}
+
+%-------PROFESSIONAL SUMMARY-------
+\section{Professional Summary}
+\small{Results-driven Machine Learning Engineer with 2+ years of experience developing production-ready AI solutions. Proven track record of improving model accuracy by 10-15\% and operational efficiency by 30-40\%. Expert in computer vision, NLP, and edge AI deployment with strong foundation in PyTorch, BERT, and MLOps. Currently pursuing dual degrees from IIT Madras and MLRITM with 8.49 CGPA.}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Machine Learning Engineer Intern}{Aug 2024 -- Present}
+      {Livestockify}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Engineered end-to-end ML pipeline achieving 95\% accuracy in poultry disease detection, reducing false negatives by 35\% and preventing potential losses of \$50K+ annually}
+        \resumeItem{Deployed YOLOv11 model on Raspberry Pi for real-time monitoring, processing 500+ data points daily with 98\% uptime}
+        \resumeItem{Developed multimodal AI system combining computer vision and audio analysis, reducing manual inspection time by 40\%}
+        \resumeItem{Implemented IoT-enabled predictive analytics dashboard serving 10+ farm locations with real-time alerts}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Tech Lead}{Jan 2024 -- Present}
+      {Infin AI Club, IIT Madras}{Remote}
+      \resumeItemListStart
+          \resumeItem{Led cross-functional team of 8 engineers across 5 AI/ML projects, establishing development standards and technical roadmaps}
+          \resumeItem{Mentored 50+ students in machine learning concepts, increasing project completion rate by 25\%}
+          \resumeItem{Organized 3 hackathons and 5 technical workshops, growing club membership by 40\% and securing \$10K in sponsorships}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Machine Learning Intern}{Jan 2023 -- Feb 2023}
+      {Verzeo}{Remote}
+      \resumeItemListStart
+          \resumeItem{Developed BERT-based sentiment analysis model for Amazon reviews, achieving 95\% accuracy on 50K+ samples}
+          \resumeItem{Implemented advanced NLP preprocessing pipeline improving F1-score by 12\% over baseline models}
+          \resumeItem{Optimized model inference time by 30\% using quantization and pruning techniques}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology Madras}{Jan 2023 -- Dec 2026}
+      {Bachelor of Science in Data Science and Applications}{CGPA: 7.00/10.0}
+      \resumeItemListStart
+        \resumeItem{Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, NLP, Statistics, Data Structures \& Algorithms}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Marri Laxman Reddy Institute of Technology}{Nov 2022 -- May 2026}
+      {Bachelor of Technology in Computer Science}{CGPA: 8.49/10.0}
+      \resumeItemListStart
+        \resumeItem{Relevant Coursework: Object-Oriented Programming, Advanced DSA, Database Systems, Computer Networks, Operating Systems}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeItemListStart
+    \resumeItem{\textbf{Programming}: Python, Java, SQL, JavaScript, C++}
+    \resumeItem{\textbf{ML/AI Frameworks}: PyTorch, TensorFlow, Scikit-learn, Hugging Face Transformers, OpenCV, YOLO}
+    \resumeItem{\textbf{Specialized AI}: Computer Vision, Natural Language Processing, BERT, LangChain, RAG, Generative AI}
+    \resumeItem{\textbf{Data \& Cloud}: MySQL, MongoDB, FAISS, AWS, Google Cloud, Docker, Kubernetes, MLflow}
+    \resumeItem{\textbf{Tools}: Git, Jupyter, Streamlit, Linux, Raspberry Pi, Power BI, Tableau}
+\resumeItemListEnd
+
+%-----------PROJECTS-----------
+\section{Key Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+      {\textbf{BERT-Based AI Content Classification} $|$ \href{https://github.com/hawkh}{GitHub}}{\emph{PyTorch, NLP, Transformers}}
+      \resumeItemListStart
+        \resumeItem{Built production-ready BERT classifier distinguishing AI vs human content with 92\% F1-score on 12K+ samples}
+        \resumeItem{Implemented Stratified K-Fold validation and Adam optimization, reducing inference time by 35\%}
+        \resumeItem{Deployed model processing 200+ articles/minute with automated retraining pipeline}
+      \resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{Intelligent Poultry Monitoring System} $|$ \href{https://github.com/hawkh}{GitHub}}{\emph{Computer Vision, Edge AI, IoT}}
+    \resumeItemListStart
+        \resumeItem{Developed real-time AI pipeline processing 5+ camera feeds with YOLOv11 deployed on Raspberry Pi}
+        \resumeItem{Achieved 96\% accuracy in chicken counting and weight estimation, reducing manual labor by 60\%}
+        \resumeItem{Implemented anomaly detection system reducing disease outbreak response time from days to hours}
+    \resumeItemListEnd
+  \resumeProjectHeading
+      {\textbf{Document Intelligence System} $|$ \href{https://github.com/hawkh}{GitHub}}{\emph{RAG, LangChain, Generative AI}}
+      \resumeItemListStart
+          \resumeItem{Built intelligent document Q\&A system using LangChain and FAISS with 50K+ embeddings and sub-second response}
+          \resumeItem{Integrated Google Gemini API with custom prompt engineering, improving response accuracy from 75\% to 91\%}
+          \resumeItem{Designed Streamlit interface supporting 100+ concurrent users with real-time document processing}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements \& Certifications}
+\resumeItemListStart
+    \resumeItem{\textbf{Awards}: 1st Place AI/ML Hackathon IIT Madras 2024 (200+ participants), Dhandho Fellowship 2023 (Top 500/10K)}
+    \resumeItem{\textbf{Certifications}: Machine Learning Specialization (Coursera), Deep Learning with PyTorch, Advanced SQL (HackerRank)}
+    \resumeItem{\textbf{Publications}: "Edge AI for Livestock Monitoring" - Under Review at IEEE IoT Journal}
+\resumeItemListEnd
+
+\end{document}
