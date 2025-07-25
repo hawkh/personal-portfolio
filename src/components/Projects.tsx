@@ -6,6 +6,7 @@ import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 const projects = [
   {
     title: "BERT-Based AI Content Classification",
+<<<<<<< HEAD
     description: "🎯 95% accuracy in distinguishing AI vs human content using BERT transformers. Implemented advanced NLP techniques with Stratified K-Fold validation and Adam optimization for robust model performance.",
     technologies: ["Deep Learning", "NLP", "PyTorch", "BERT", "Hugging Face"],
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800&h=400",
@@ -40,6 +41,26 @@ const projects = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=400",
     githubUrl: "https://github.com/hawkh",
     impact: "95% Accuracy"
+=======
+    description: "Implemented a BERT-based text classification model to distinguish between AI-generated and human-written articles. Utilized Hugging Face's transformers library for BERT tokenization and fine-tuning. Incorporated Stratified K-Fold cross-validation and optimized training with Adam optimizer.",
+    technologies: ["Deep Learning", "NLP", "PyTorch", "BERT"],
+    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800&h=400",
+    githubUrl: "#",
+  },
+  {
+    title: "Intelligent Poultry Monitoring System",
+    description: "Developed an end-to-end AI pipeline for real-time poultry health monitoring using multimodal data. Trained and deployed YOLOv11 model on Raspberry Pi to count chickens and estimate weights. Implemented anomaly detection using computer vision and audio analysis.",
+    technologies: ["Deep Learning", "Computer Vision", "Edge AI", "IoT"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=400",
+    githubUrl: "#",
+  },
+  {
+    title: "Document Intelligence System",
+    description: "Developed automated document analysis tool using LangChain and FAISS, reducing processing time by 30%. Implemented Google Generative AI (Gemini) for intelligent document querying. Designed streamlit-based UI for real-time Q&A over PDF documents.",
+    technologies: ["NLP", "RAG", "Generative AI", "LangChain"],
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&q=80&w=800&h=400",
+    githubUrl: "#",
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
   }
 ];
 
@@ -52,6 +73,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Featured Projects</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">Innovative AI solutions that deliver real-world impact</p>
@@ -137,6 +159,11 @@ export default function Projects() {
         {/* Other Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.filter(p => !p.featured).map((project, index) => (
+=======
+        <h2 className="text-3xl font-bold mb-12">Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

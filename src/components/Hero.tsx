@@ -93,7 +93,11 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className="order-1 lg:order-2 text-center lg:text-left space-y-6"
+=======
+            className="order-1 lg:order-2 text-left space-y-6"
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
           >
             <div className="space-y-4">
               <motion.h2 
@@ -126,9 +130,15 @@ export default function Hero() {
                 <Typewriter
                   options={{
                     strings: [
+<<<<<<< HEAD
                       'Turning Data into Intelligence 🧠',
                       'Building AI that Matters 🚀',
                       'ML Engineer with 95% Success Rate 🎯'
+=======
+                      'Data Scientist from India',
+                      'Exploring Computer Vision',
+                      'Building AI Solutions'
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                     ],
                     autoStart: true,
                     loop: true,
@@ -145,15 +155,22 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="space-y-3 text-gray-400"
             >
+<<<<<<< HEAD
               <p>🎓 BS Data Science @ IIT Madras | B.Tech CSE @ MLRITM</p>
               <p>🚀 ML Engineer @ Livestockify | 95% Model Accuracy</p>
               <p>🏆 Tech Lead @ Infin AI Club | Mentoring 50+ Students</p>
+=======
+              <p>🎓 BS in Data Science @ IIT Madras</p>
+              <p>🌱 Currently diving deep into Deep Learning</p>
+              <p>💡 Passionate about AI & Computer Vision</p>
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
+<<<<<<< HEAD
               className="flex flex-col sm:flex-row gap-4 pt-6"
             >
               <a 
@@ -169,6 +186,21 @@ export default function Hero() {
                 className="px-8 py-4 border border-primary/30 hover:border-primary/60 text-primary rounded-full font-medium transition-all duration-200 hover:bg-primary/10 text-center"
               >
                 🚀 View Projects
+=======
+              className="flex gap-4 pt-4"
+            >
+              <a 
+                href="#projects" 
+                className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-colors duration-200"
+              >
+                View Projects
+              </a>
+              <a 
+                href="#contact" 
+                className="px-6 py-3 border border-primary/30 hover:border-primary/60 text-primary rounded-full font-medium transition-colors duration-200"
+              >
+                Get in Touch
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
               </a>
             </motion.div>
 
@@ -176,7 +208,11 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
+<<<<<<< HEAD
               className="flex gap-6 pt-8 justify-center sm:justify-start"
+=======
+              className="flex gap-6 pt-6"
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
             >
               {socialLinks.map((social, index) => (
                 <a
@@ -184,13 +220,21 @@ export default function Hero() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
                   className="p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transform hover:scale-110 transition-all duration-200 border border-gray-700/50 hover:border-primary/50"
+=======
+                  className="transform hover:scale-110 transition-transform duration-200"
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   style={{ color: social.color }}
                 >
                   <img 
                     src={social.icon} 
                     alt="social" 
+<<<<<<< HEAD
                     className="h-5 w-5 filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-200" 
+=======
+                    className="h-6 w-6 filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-200" 
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                     style={{ filter: 'brightness(0) invert(1)' }}
                     onMouseOver={(e) => e.currentTarget.style.filter = 'none'}
                     onMouseOut={(e) => e.currentTarget.style.filter = 'brightness(0) invert(1)'}

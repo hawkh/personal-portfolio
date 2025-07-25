@@ -3,10 +3,15 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+<<<<<<< HEAD
 import { useBasePath } from './BasePathProvider'
 
 // Navigation items without base path - will be processed by useBasePath
 const navigationItems = [
+=======
+
+const navigation = [
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
@@ -17,6 +22,7 @@ const navigationItems = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+<<<<<<< HEAD
   const { getPath } = useBasePath()
   
   // Process navigation items with base path
@@ -25,6 +31,8 @@ export default function Navbar() {
     // Only apply base path to non-anchor links
     href: item.href.startsWith('#') ? item.href : getPath(item.href)
   }))
+=======
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
 
   return (
     <motion.header
@@ -101,4 +109,8 @@ export default function Navbar() {
       </div>
     </motion.header>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9

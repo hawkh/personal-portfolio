@@ -21,7 +21,7 @@ git commit -m "Initial portfolio commit"
 
 ## Step 4: Connect and Push
 ```
-git remote add origin https://github.com/hawkh/[REPO-NAME].git
+git remote add origin https://github.com/hawkh/personal-portfolio.git
 git branch -M main
 git push -u origin main
 ```
@@ -33,7 +33,7 @@ git push -u origin main
 
 ## Step 6: Wait 2-3 minutes
 Your portfolio will be live at:
-`https://hawkh.github.io/[REPO-NAME]/`
+`https://hawkh.github.io/personal-portfolio/`
 
 ## Your portfolio is ready with:
 ✅ Professional design with animations

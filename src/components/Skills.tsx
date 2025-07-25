@@ -10,26 +10,46 @@ import {
 
 const skills = [
   {
+<<<<<<< HEAD
     category: "Programming & Frameworks",
     items: ["Python", "Java", "PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
+=======
+    category: "Programming Languages",
+    items: ["Python (Pandas, NumPy, Scikit-learn)", "Java"],
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     icon: CommandLineIcon,
     color: "#34D399"
   },
   {
+<<<<<<< HEAD
     category: "AI & Machine Learning",
     items: ["Deep Learning", "Computer Vision", "NLP", "BERT", "Transformers", "YOLOv11", "LangChain"],
+=======
+    category: "Machine Learning & Deep Learning",
+    items: ["PyTorch", "NLP", "Data Analysis", "Transformers"],
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     icon: CpuChipIcon,
     color: "#60A5FA"
   },
   {
+<<<<<<< HEAD
     category: "Data & Analytics",
     items: ["SQL", "MySQL", "MongoDB", "FAISS", "Data Analysis", "Power BI", "Statistical Modeling"],
+=======
+    category: "Databases",
+    items: ["SQL", "MySQL", "MongoDB"],
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     icon: CircleStackIcon,
     color: "#F472B6"
   },
   {
+<<<<<<< HEAD
     category: "Tools & Platforms",
     items: ["Git", "Jupyter", "Streamlit", "Linux", "Raspberry Pi", "Google Colab", "Hugging Face"],
+=======
+    category: "Development Tools",
+    items: ["Git", "Jupyter Notebook", "Power BI", "Linux"],
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     icon: CloudIcon,
     color: "#A78BFA"
   }
@@ -124,6 +144,7 @@ export default function Skills() {
         viewport={{ once: true }}
         className="relative"
       >
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <motion.h2 
             className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
@@ -141,6 +162,23 @@ export default function Skills() {
           >
             Cutting-edge technologies powering intelligent solutions
           </motion.p>
+=======
+        <div className="flex items-center gap-4 mb-12">
+          <motion.h2 
+            className="text-3xl font-bold"
+            initial={{ x: -20 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Skills & Technologies
+          </motion.h2>
+          <motion.div 
+            className="h-px flex-grow bg-gradient-to-r from-primary to-transparent"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

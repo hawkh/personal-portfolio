@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, RocketLaunchIcon, BriefcaseIcon, AcademicCapIcon } from '@heroicons/react/24/outline';
 
 const contactReasons = [
@@ -166,32 +167,88 @@ export default function Contact() {
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                   Your Name *
+=======
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+
+export default function Contact() {
+  return (
+    <section className="section-container" id="contact">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold mb-12">Get in Touch</h2>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <EnvelopeIcon className="h-6 w-6 text-primary mr-3" />
+                <a href="mailto:ruthvikworking@gmail.com" className="hover:text-primary transition-colors">
+                  ruthvikworking@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <PhoneIcon className="h-6 w-6 text-primary mr-3" />
+                <a href="tel:+919290614597" className="hover:text-primary transition-colors">
+                  +91 9290614597
+                </a>
+              </div>
+              <div className="flex items-center">
+                <MapPinIcon className="h-6 w-6 text-primary mr-3" />
+                <span>Hyderabad, India</span>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Name
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+<<<<<<< HEAD
                   className="w-full px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                   placeholder="Enter your full name"
+=======
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700"
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   required
                 />
               </div>
               
               <div>
+<<<<<<< HEAD
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address *
+=======
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Email
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+<<<<<<< HEAD
                   className="w-full px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                   placeholder="your.email@example.com"
+=======
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700"
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   required
                 />
               </div>
               
               <div>
+<<<<<<< HEAD
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                   Subject
                 </label>
@@ -207,19 +264,29 @@ export default function Contact() {
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
+=======
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  Message
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                 </label>
                 <textarea
                   id="message"
                   name="message"
+<<<<<<< HEAD
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all duration-200 resize-none"
                   placeholder="Tell me about your project, opportunity, or just say hello!"
+=======
+                  rows={4}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700"
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   required
                 ></textarea>
               </div>
               
               <button
                 type="submit"
+<<<<<<< HEAD
                 className="w-full px-6 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 🚀 Send Message
@@ -228,6 +295,16 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
+=======
+                className="w-full btn btn-primary"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </motion.div>
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     </section>
   );
 }

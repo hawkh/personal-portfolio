@@ -3,12 +3,16 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+<<<<<<< HEAD
 import BasePathProvider from '@/components/BasePathProvider'
 import StructuredData from '@/components/StructuredData'
+=======
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: {
     default: 'Sai Ruthvik Bommakanti - Machine Learning Engineer Portfolio',
     template: '%s | Sai Ruthvik Bommakanti'
@@ -83,6 +87,10 @@ export const metadata: Metadata = {
     'theme-color': '#3B82F6',
     'color-scheme': 'dark light',
   }
+=======
+  title: 'Sai Ruthvik Bommakanti - Portfolio',
+  description: 'Machine Learning Engineer and Data Scientist',
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
 }
 
 export default function RootLayout({
@@ -93,12 +101,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} dark:bg-gray-900 dark:text-gray-100`}>
+<<<<<<< HEAD
         <BasePathProvider>
           <StructuredData />
           <Navbar />
           <main>{children}</main>
           <Footer />
         </BasePathProvider>
+=======
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+>>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
       </body>
     </html>
   )
