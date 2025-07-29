@@ -3,32 +3,7 @@
 import { motion } from 'framer-motion';
 import { TrophyIcon, AcademicCapIcon, StarIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
-const achievements = [
-  {
-    icon: TrophyIcon,
-    title: "95% Model Accuracy",
-    description: "Achieved 95% accuracy in poultry disease detection using multimodal AI",
-    color: "#FFD700"
-  },
-  {
-    icon: ChartBarIcon,
-    title: "30% Efficiency Boost",
-    description: "Reduced document processing time by 30% with AI-powered analysis",
-    color: "#00D4AA"
-  },
-  {
-    icon: AcademicCapIcon,
-    title: "IIT Madras Scholar",
-    description: "Pursuing BS in Data Science from India's premier tech institute",
-    color: "#6366F1"
-  },
-  {
-    icon: StarIcon,
-    title: "Tech Leadership",
-    description: "Leading AI initiatives at Infin AI Club, mentoring 50+ students",
-    color: "#F59E0B"
-  }
-];
+import { achievements } from '../data/achievements';
 
 export default function Achievements() {
   return (
@@ -56,7 +31,13 @@ export default function Achievements() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {achievements.map((achievement, index) => {
-            const Icon = achievement.icon;
+            const iconMap = {
+              TrophyIcon,
+              AcademicCapIcon,
+              StarIcon,
+              ChartBarIcon
+            };
+            const Icon = iconMap[achievement.icon] || TrophyIcon;
             return (
               <motion.div
                 key={index}

@@ -1,16 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import { statistics, expertiseAreas } from '../data/statistics';
+import { personalData } from '../data/personal';
 
 export default function About() {
-<<<<<<< HEAD
-  const stats = [
-    { number: "95%", label: "Model Accuracy" },
-    { number: "50+", label: "Students Mentored" },
-    { number: "15+", label: "Projects Completed" },
-    { number: "2+", label: "Years Experience" }
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden" id="about">
       <div className="absolute inset-0">
@@ -64,7 +58,7 @@ export default function About() {
               </div>
 
               <div className="grid grid-cols-2 gap-6 pt-6">
-                {stats.map((stat, index) => (
+                {statistics.map((stat, index) => (
                   <motion.div
                     key={index}
                     className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700/50"
@@ -72,7 +66,7 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                   >
-                    <div className="text-2xl font-bold text-primary mb-1">{stat.number}</div>
+                    <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                   </motion.div>
                 ))}
@@ -88,13 +82,7 @@ export default function About() {
               <div className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50">
                 <h3 className="text-2xl font-bold mb-6 text-white">Expertise Areas</h3>
                 <div className="space-y-4">
-                  {[
-                    { icon: "🤖", title: "Machine Learning & AI", desc: "PyTorch, TensorFlow, Scikit-learn" },
-                    { icon: "👁️", title: "Computer Vision", desc: "YOLO, OpenCV, Image Processing" },
-                    { icon: "💬", title: "Natural Language Processing", desc: "BERT, Transformers, LangChain" },
-                    { icon: "🔗", title: "Edge AI & IoT", desc: "Raspberry Pi, Real-time Processing" },
-                    { icon: "📊", title: "Data Engineering", desc: "ETL Pipelines, Vector Databases" }
-                  ].map((area, index) => (
+                  {expertiseAreas.map((area, index) => (
                     <motion.div
                       key={index}
                       className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-700/30 transition-colors duration-300"
@@ -105,7 +93,7 @@ export default function About() {
                       <span className="text-2xl">{area.icon}</span>
                       <div>
                         <h4 className="text-white font-semibold mb-1">{area.title}</h4>
-                        <p className="text-gray-400 text-sm">{area.desc}</p>
+                        <p className="text-gray-400 text-sm">{area.description}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -115,38 +103,6 @@ export default function About() {
           </div>
         </motion.div>
       </div>
-=======
-  return (
-    <section className="section-container" id="about">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-3xl font-bold mb-8">About Me</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <p className="text-gray-600 dark:text-gray-300">
-              Machine Learning Engineer at the intersection of AI research and applied deployment. I specialize in designing, training, and optimizing AI models that translate into business-critical solutions.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              Currently pursuing BS in Data Science at IIT Madras and B.Tech in Computer Science at MLRITM, I combine academic excellence with practical experience in solving real-world problems through data-driven approaches.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Focus Areas:</h3>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Machine Learning & AI</li>
-              <li>Computer Vision</li>
-              <li>Natural Language Processing</li>
-              <li>Deep Learning</li>
-              <li>IoT-enabled Predictive Analytics</li>
-            </ul>
-          </div>
-        </div>
-      </motion.div>
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     </section>
   );
 }

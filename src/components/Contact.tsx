@@ -1,26 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, RocketLaunchIcon, BriefcaseIcon, AcademicCapIcon } from '@heroicons/react/24/outline';
-
-const contactReasons = [
-  {
-    icon: BriefcaseIcon,
-    title: "Job Opportunities",
-    description: "Looking for a skilled ML Engineer? Let's discuss how I can contribute to your team."
-  },
-  {
-    icon: RocketLaunchIcon,
-    title: "Project Collaboration",
-    description: "Have an exciting AI project? I'd love to collaborate and bring innovative solutions."
-  },
-  {
-    icon: AcademicCapIcon,
-    title: "Mentorship & Learning",
-    description: "Want to discuss AI/ML concepts or need guidance? Happy to share knowledge!"
-  }
-];
+import { contactInfo, contactReasons, socialLinks } from '../data/contact';
 
 export default function Contact() {
   return (
@@ -56,7 +38,12 @@ export default function Contact() {
           className="grid md:grid-cols-3 gap-6 mb-16"
         >
           {contactReasons.map((reason, index) => {
-            const Icon = reason.icon;
+            const iconMap = {
+              BriefcaseIcon,
+              RocketLaunchIcon,
+              AcademicCapIcon
+            };
+            const Icon = iconMap[reason.icon] || BriefcaseIcon;
             return (
               <div key={index} className="text-center p-6 bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-primary/50 transition-all duration-300">
                 <div className="w-12 h-12 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
@@ -95,8 +82,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <a href="mailto:ruthvikworking@gmail.com" className="text-white hover:text-primary transition-colors font-medium">
-                    ruthvikworking@gmail.com
+                  <a href={`mailto:${contactInfo.email}`} className="text-white hover:text-primary transition-colors font-medium">
+                    {contactInfo.email}
                   </a>
                 </div>
               </motion.div>
@@ -111,7 +98,7 @@ export default function Contact() {
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
                   <a href="tel:+919290614597" className="text-white hover:text-primary transition-colors font-medium">
-                    +91 9290614597
+                    {contactInfo.phone}
                   </a>
                 </div>
               </motion.div>
@@ -125,7 +112,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <span className="text-white font-medium">Hyderabad, India</span>
+                  <span className="text-white font-medium">{contactInfo.location}</span>
                 </div>
               </motion.div>
             </div>
@@ -135,7 +122,7 @@ export default function Contact() {
               <h4 className="text-lg font-semibold mb-4 text-white">Quick Actions</h4>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="./Sai_Ruthvik_MLE_Improved.pdf"
+                  href={contactInfo.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-medium transition-all duration-200 text-center transform hover:scale-105"
@@ -143,7 +130,7 @@ export default function Contact() {
                   📄 Download Resume
                 </a>
                 <a
-                  href="https://linkedin.com/in/sai-ruthvik-6b880a213"
+                  href={socialLinks.find(link => link.name === 'LinkedIn')?.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 border border-primary/30 hover:border-primary/60 text-primary rounded-lg font-medium transition-all duration-200 text-center hover:bg-primary/10"
@@ -163,92 +150,36 @@ export default function Contact() {
             className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50"
           >
             <h3 className="text-xl font-bold mb-6 text-white">Send a Message</h3>
-            <form className="space-y-6" action="mailto:ruthvikworking@gmail.com" method="post" encType="text/plain">
+            <form className="space-y-6" action={`mailto:${contactInfo.email}`} method="post" encType="text/plain">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                   Your Name *
-=======
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
-
-export default function Contact() {
-  return (
-    <section className="section-container" id="contact">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-3xl font-bold mb-12">Get in Touch</h2>
-        <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <EnvelopeIcon className="h-6 w-6 text-primary mr-3" />
-                <a href="mailto:ruthvikworking@gmail.com" className="hover:text-primary transition-colors">
-                  ruthvikworking@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <PhoneIcon className="h-6 w-6 text-primary mr-3" />
-                <a href="tel:+919290614597" className="hover:text-primary transition-colors">
-                  +91 9290614597
-                </a>
-              </div>
-              <div className="flex items-center">
-                <MapPinIcon className="h-6 w-6 text-primary mr-3" />
-                <span>Hyderabad, India</span>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Name
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-<<<<<<< HEAD
                   className="w-full px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                   placeholder="Enter your full name"
-=======
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700"
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   required
                 />
               </div>
               
               <div>
-<<<<<<< HEAD
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address *
-=======
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-<<<<<<< HEAD
                   className="w-full px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
                   placeholder="your.email@example.com"
-=======
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700"
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   required
                 />
               </div>
               
               <div>
-<<<<<<< HEAD
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                   Subject
                 </label>
@@ -264,29 +195,19 @@ export default function Contact() {
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
-=======
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                 </label>
                 <textarea
                   id="message"
                   name="message"
-<<<<<<< HEAD
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-gray-700/50 border border-gray-600/50 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400 transition-all duration-200 resize-none"
                   placeholder="Tell me about your project, opportunity, or just say hello!"
-=======
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700"
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
                   required
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-<<<<<<< HEAD
                 className="w-full px-6 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white rounded-lg font-medium transition-all duration-200 transform hover:scale-105 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 🚀 Send Message
@@ -295,16 +216,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-=======
-                className="w-full btn btn-primary"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </motion.div>
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
     </section>
   );
 }

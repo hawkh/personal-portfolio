@@ -3,66 +3,7 @@
 import { motion } from 'framer-motion';
 import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
-const projects = [
-  {
-    title: "BERT-Based AI Content Classification",
-<<<<<<< HEAD
-    description: "🎯 95% accuracy in distinguishing AI vs human content using BERT transformers. Implemented advanced NLP techniques with Stratified K-Fold validation and Adam optimization for robust model performance.",
-    technologies: ["Deep Learning", "NLP", "PyTorch", "BERT", "Hugging Face"],
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "https://github.com/hawkh",
-    liveUrl: "#",
-    impact: "95% Accuracy",
-    featured: true
-  },
-  {
-    title: "Intelligent Poultry Monitoring System",
-    description: "🚀 Real-time AI pipeline for poultry health monitoring with YOLOv11 on Raspberry Pi. Combines computer vision, audio analysis, and IoT sensors for comprehensive livestock management.",
-    technologies: ["YOLOv11", "Computer Vision", "Edge AI", "IoT", "Raspberry Pi"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "https://github.com/hawkh",
-    liveUrl: "#",
-    impact: "Real-time Monitoring",
-    featured: true
-  },
-  {
-    title: "Document Intelligence System",
-    description: "⚡ 30% faster document processing with AI-powered analysis using LangChain and FAISS. Features intelligent Q&A over PDFs with Google Gemini integration and intuitive Streamlit interface.",
-    technologies: ["LangChain", "FAISS", "Generative AI", "Streamlit", "Google Gemini"],
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "https://github.com/hawkh",
-    liveUrl: "#",
-    impact: "30% Efficiency Boost"
-  },
-  {
-    title: "Sentiment Analysis Engine",
-    description: "🎭 Advanced sentiment analysis for Amazon reviews using BERT and Transformers. Achieved 95% accuracy with comprehensive text preprocessing and fine-tuned model architecture.",
-    technologies: ["BERT", "Transformers", "NLP", "Sentiment Analysis", "Python"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "https://github.com/hawkh",
-    impact: "95% Accuracy"
-=======
-    description: "Implemented a BERT-based text classification model to distinguish between AI-generated and human-written articles. Utilized Hugging Face's transformers library for BERT tokenization and fine-tuning. Incorporated Stratified K-Fold cross-validation and optimized training with Adam optimizer.",
-    technologies: ["Deep Learning", "NLP", "PyTorch", "BERT"],
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "#",
-  },
-  {
-    title: "Intelligent Poultry Monitoring System",
-    description: "Developed an end-to-end AI pipeline for real-time poultry health monitoring using multimodal data. Trained and deployed YOLOv11 model on Raspberry Pi to count chickens and estimate weights. Implemented anomaly detection using computer vision and audio analysis.",
-    technologies: ["Deep Learning", "Computer Vision", "Edge AI", "IoT"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "#",
-  },
-  {
-    title: "Document Intelligence System",
-    description: "Developed automated document analysis tool using LangChain and FAISS, reducing processing time by 30%. Implemented Google Generative AI (Gemini) for intelligent document querying. Designed streamlit-based UI for real-time Q&A over PDF documents.",
-    technologies: ["NLP", "RAG", "Generative AI", "LangChain"],
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&q=80&w=800&h=400",
-    githubUrl: "#",
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
-  }
-];
+import { projects } from '../data/projects';
 
 export default function Projects() {
   return (
@@ -73,7 +14,6 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Featured Projects</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">Innovative AI solutions that deliver real-world impact</p>
@@ -81,7 +21,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {projects.filter(p => p.featured).map((project, index) => (
             <motion.div
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -98,7 +38,7 @@ export default function Projects() {
               <div className="relative h-56 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
                 <img 
-                  src={project.image} 
+                  src={project.images[0]} 
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
@@ -106,7 +46,7 @@ export default function Projects() {
                 {/* Impact Badge */}
                 <div className="absolute bottom-4 left-4 z-20">
                   <span className="px-3 py-1 bg-primary/90 text-white text-sm font-medium rounded-full">
-                    {project.impact}
+                    {project.metrics[0]?.value} {project.metrics[0]?.label}
                   </span>
                 </div>
               </div>
@@ -159,13 +99,8 @@ export default function Projects() {
         {/* Other Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.filter(p => !p.featured).map((project, index) => (
-=======
-        <h2 className="text-3xl font-bold mb-12">Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
             <motion.div
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -175,7 +110,7 @@ export default function Projects() {
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <img 
-                  src={project.image} 
+                  src={project.images[0]} 
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />

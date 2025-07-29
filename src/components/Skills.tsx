@@ -8,55 +8,21 @@ import {
   CloudIcon 
 } from '@heroicons/react/24/outline';
 
-const skills = [
-  {
-<<<<<<< HEAD
-    category: "Programming & Frameworks",
-    items: ["Python", "Java", "PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy"],
-=======
-    category: "Programming Languages",
-    items: ["Python (Pandas, NumPy, Scikit-learn)", "Java"],
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
-    icon: CommandLineIcon,
-    color: "#34D399"
-  },
-  {
-<<<<<<< HEAD
-    category: "AI & Machine Learning",
-    items: ["Deep Learning", "Computer Vision", "NLP", "BERT", "Transformers", "YOLOv11", "LangChain"],
-=======
-    category: "Machine Learning & Deep Learning",
-    items: ["PyTorch", "NLP", "Data Analysis", "Transformers"],
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
-    icon: CpuChipIcon,
-    color: "#60A5FA"
-  },
-  {
-<<<<<<< HEAD
-    category: "Data & Analytics",
-    items: ["SQL", "MySQL", "MongoDB", "FAISS", "Data Analysis", "Power BI", "Statistical Modeling"],
-=======
-    category: "Databases",
-    items: ["SQL", "MySQL", "MongoDB"],
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
-    icon: CircleStackIcon,
-    color: "#F472B6"
-  },
-  {
-<<<<<<< HEAD
-    category: "Tools & Platforms",
-    items: ["Git", "Jupyter", "Streamlit", "Linux", "Raspberry Pi", "Google Colab", "Hugging Face"],
-=======
-    category: "Development Tools",
-    items: ["Git", "Jupyter Notebook", "Power BI", "Linux"],
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
-    icon: CloudIcon,
-    color: "#A78BFA"
-  }
-];
+import { skillCategories } from '../data/skills';
 
-const SkillCard = ({ skill, index }) => {
-  const Icon = skill.icon;
+interface SkillCardProps {
+  skill: any;
+  index: number;
+}
+
+const SkillCard = ({ skill, index }: SkillCardProps) => {
+  const iconMap = {
+    CommandLineIcon,
+    CpuChipIcon,
+    CircleStackIcon,
+    CloudIcon
+  };
+  const Icon = iconMap[skill.icon as keyof typeof iconMap] || CommandLineIcon;
   
   return (
     <motion.div
@@ -92,11 +58,11 @@ const SkillCard = ({ skill, index }) => {
             <div className="p-2 rounded-full bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300" style={{ backgroundColor: skill.color }}>
               <Icon className="h-6 w-6" style={{ color: skill.color }} />
             </div>
-            <h3 className="text-xl font-semibold ml-2 group-hover:text-white transition-colors duration-300">{skill.category}</h3>
+            <h3 className="text-xl font-semibold ml-2 group-hover:text-white transition-colors duration-300">{skill.name}</h3>
           </motion.div>
           
           <div className="flex flex-wrap gap-2">
-            {skill.items.map((item, i) => (
+            {skill.skills.map((item: any, i: number) => (
               <motion.span
                 key={i}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -108,7 +74,7 @@ const SkillCard = ({ skill, index }) => {
                   color: skill.color
                 }}
               >
-                <span className="relative z-10 group-hover/item:text-white transition-colors duration-300">{item}</span>
+                <span className="relative z-10 group-hover/item:text-white transition-colors duration-300">{item.name}</span>
                 <div 
                   className="absolute inset-0 w-0 group-hover/item:w-full transition-all duration-300"
                   style={{ backgroundColor: skill.color }}
@@ -144,7 +110,6 @@ export default function Skills() {
         viewport={{ once: true }}
         className="relative"
       >
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <motion.h2 
             className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
@@ -162,27 +127,10 @@ export default function Skills() {
           >
             Cutting-edge technologies powering intelligent solutions
           </motion.p>
-=======
-        <div className="flex items-center gap-4 mb-12">
-          <motion.h2 
-            className="text-3xl font-bold"
-            initial={{ x: -20 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Skills & Technologies
-          </motion.h2>
-          <motion.div 
-            className="h-px flex-grow bg-gradient-to-r from-primary to-transparent"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 0.8 }}
-          />
->>>>>>> f3fcba78029086a05612b7bfd2aeabbeffc863c9
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {skills.map((skill, index) => (
+          {skillCategories.map((skill, index) => (
             <SkillCard key={index} skill={skill} index={index} />
           ))}
         </div>
