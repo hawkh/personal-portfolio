@@ -117,7 +117,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 pt-6"
             >
               <a
-                href="/Sai_Ruthvik MLE.pdf"
+                href="/Sai_Ruthvik_MLE_Improved.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-center"

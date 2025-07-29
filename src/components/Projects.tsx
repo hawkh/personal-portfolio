@@ -1,11 +1,28 @@
 'use client'
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CodeBracketIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
 import { projects } from '../data/projects';
+import ProjectFilter from './common/ProjectFilter';
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState('All');
+  
+  const categories = ['All', 'Machine Learning', 'Computer Vision', 'NLP', 'Web Development'];
+  
+  const filteredProjects = activeCategory === 'All' 
+    ? projects 
+    : projects.filter(project => 
+        project.technologies.some(tech => 
+          categories.includes(activeCategory) && 
+          (activeCategory === 'Machine Learning' && ['PyTorch', 'TensorFlow', 'Scikit-learn'].some(ml => tech.includes(ml))) ||
+          (activeCategory === 'Computer Vision' && ['YOLOv11', 'OpenCV', 'Computer Vision'].some(cv => tech.includes(cv))) ||
+          (activeCategory === 'NLP' && ['BERT', 'Transformers', 'LangChain', 'NLP'].some(nlp => tech.includes(nlp))) ||
+          (activeCategory === 'Web Development' && ['React', 'Next.js', 'Node.js'].some(web => tech.includes(web)))
+        )
+      );
   return (
     <section className="section-container" id="projects">
       <motion.div
@@ -18,8 +35,14 @@ export default function Projects() {
           <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Featured Projects</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">Innovative AI solutions that deliver real-world impact</p>
         </div>
+        
+        <ProjectFilter 
+          categories={categories}
+          activeCategory={activeCategory}
+          onCategoryChange={setActiveCategory}
+        />
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {projects.filter(p => p.featured).map((project, index) => (
+          {filteredProjects.filter(p => p.featured).map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -98,7 +121,7 @@ export default function Projects() {
         
         {/* Other Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.filter(p => !p.featured).map((project, index) => (
+          {filteredProjects.filter(p => !p.featured).map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
