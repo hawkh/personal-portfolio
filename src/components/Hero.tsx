@@ -105,9 +105,10 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="space-y-3 text-gray-400"
             >
-              <p>🎓 BS Data Science @ IIT Madras | B.Tech CSE @ MLRITM</p>
-              <p>🚀 ML Engineer @ Livestockify | 95% Model Accuracy</p>
-              <p>🏆 Tech Lead @ Infin AI Club | Mentoring 50+ Students</p>
+              <p>Designing intelligent systems with code, data, and math</p>
+              <p>Building systems that see, understand, and act</p>
+              <p>Predictive, perceptive, and production-ready</p>
+
             </motion.div>
 
             <motion.div
